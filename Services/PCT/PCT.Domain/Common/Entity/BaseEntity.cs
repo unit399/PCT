@@ -1,4 +1,4 @@
-namespace PCT.Domain.Common;
+namespace PCT.Domain.Common.Entity;
 
 public abstract class BaseEntity
 {

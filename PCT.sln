@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A82E971A-D188-418C-8103-9FDA6A640690}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PCT", "PCT", "{73863328-5325-4523-9F1F-9AF1FFE78ACD}"
@@ -8,13 +11,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{D485D414-691
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4FAF01E1-F946-4000-911F-BF7124CF6E79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCT.WebAPI", "Services\PCT\PCT.WebAPI\PCT.WebAPI.csproj", "{8AD85DEA-2301-4EC8-AE04-3B1ADAB60845}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCT.WebAPI", "Services\PCT\PCT.WebAPI\PCT.WebAPI.csproj", "{8AD85DEA-2301-4EC8-AE04-3B1ADAB60845}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCT.Application", "Services\PCT\PCT.Application\PCT.Application.csproj", "{5ED94816-10BE-463F-8E23-AF9D98A34950}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCT.Application", "Services\PCT\PCT.Application\PCT.Application.csproj", "{5ED94816-10BE-463F-8E23-AF9D98A34950}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCT.Domain", "Services\PCT\PCT.Domain\PCT.Domain.csproj", "{4DF4D2F7-E64C-4FCA-AFBD-C4845196E740}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCT.Domain", "Services\PCT\PCT.Domain\PCT.Domain.csproj", "{4DF4D2F7-E64C-4FCA-AFBD-C4845196E740}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCT.Infrastructure", "Services\PCT\PCT.Infrastructure\PCT.Infrastructure.csproj", "{209D4347-8A82-4910-91CE-3D23F379DEE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCT.Infrastructure", "Services\PCT\PCT.Infrastructure\PCT.Infrastructure.csproj", "{209D4347-8A82-4910-91CE-3D23F379DEE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requests", "Requests", "{904736CA-6AC3-441C-A4E4-88247204681D}"
+	ProjectSection(SolutionItems) = preProject
+		Tests\Requests\PCT.WebAPI.http = Tests\Requests\PCT.WebAPI.http
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,11 +47,18 @@ Global
 		{209D4347-8A82-4910-91CE-3D23F379DEE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{209D4347-8A82-4910-91CE-3D23F379DEE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{73863328-5325-4523-9F1F-9AF1FFE78ACD} = {A82E971A-D188-418C-8103-9FDA6A640690}
 		{8AD85DEA-2301-4EC8-AE04-3B1ADAB60845} = {73863328-5325-4523-9F1F-9AF1FFE78ACD}
 		{5ED94816-10BE-463F-8E23-AF9D98A34950} = {73863328-5325-4523-9F1F-9AF1FFE78ACD}
 		{4DF4D2F7-E64C-4FCA-AFBD-C4845196E740} = {73863328-5325-4523-9F1F-9AF1FFE78ACD}
 		{209D4347-8A82-4910-91CE-3D23F379DEE4} = {73863328-5325-4523-9F1F-9AF1FFE78ACD}
+		{904736CA-6AC3-441C-A4E4-88247204681D} = {4FAF01E1-F946-4000-911F-BF7124CF6E79}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1381D444-12E7-4957-A6A2-2AA00152B2EA}
 	EndGlobalSection
 EndGlobal

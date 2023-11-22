@@ -1,0 +1,32 @@
+﻿@PCT.WebAPI_HostAddress = https://localhost:7285
+
+###
+
+POST {{PCT.WebAPI_HostAddress}}/api/account/register
+Content-Type: application/json
+
+{
+  "email": "okan.cilingiroglu@gmail.com",
+  "password": "qq11QQ!!"
+}
+###
+
+# @name loginRequest
+POST {{PCT.WebAPI_HostAddress}}/api/account/login
+Content-Type: application/json
+
+{
+  "email": "okan.cilingiroglu@gmail.com",
+  "password": "qq11QQ!!"
+}
+
+###
+
+@jwt = {{loginRequest.response.body}}
+
+
+GET {{PCT.WebAPI_HostAddress}}/api/account/getAll
+Accept: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoib2thbi5jaWxpbmdpcm9nbHVAZ21haWwuY29tIiwianRpIjoiMzdhMDIwN2UtNjk0OS00OTMxLTk0NzQtMDI1ZGEyZmQ2ZGFiIiwiZXhwIjoxNzAwNjkxODgyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjcyODUiLCJhdWQiOiJVc2VyIn0.XUuAbaRNV13tbl5FjGBC1NJLsx9zuQEwmrguwWtQQNE
+//Authorization: Bearer {{jwt}}
+###

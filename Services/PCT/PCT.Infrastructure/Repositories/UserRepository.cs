@@ -5,14 +5,22 @@ using PCT.Infrastructure.Context;
 
 namespace PCT.Infrastructure.Repositories;
 
-public class UserRepository : BaseRepository<User>, IUserRepository
+public class UserRepository : IUserRepository
 {
-    public UserRepository(ApplicationDbContext context) : base(context)
+    private readonly ApplicationDbContext _context;
+
+    public UserRepository(ApplicationDbContext context)
     {
+        _context = context;
     }
     
     public Task<User?> GetByEmail(string email, CancellationToken cancellationToken)
     {
-        return Context.Users.FirstOrDefaultAsync(x => x.Email == email, cancellationToken);
+        return _context.Users.FirstOrDefaultAsync(x => x.Email == email, cancellationToken);
+    }
+    
+    public Task<List<User>> GetAll(CancellationToken cancellationToken)
+    {
+        return _context.Users.ToListAsync(cancellationToken);
     }
 }

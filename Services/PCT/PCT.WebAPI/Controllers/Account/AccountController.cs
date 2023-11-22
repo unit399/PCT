@@ -1,6 +1,8 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PCT.Application.Account.GetAll;
+using PCT.Application.Account.Login;
 using PCT.Application.Account.Register;
 using PCT.WebAPI.Controllers.Common;
 
@@ -16,16 +18,27 @@ public class AccountController : BaseApiController
     }
     
     [HttpPost("register")]
-    public async Task<ActionResult<RegisterUserResponse>> Register(RegisterUserRequest userRequest, CancellationToken cancellationToken)
+    [AllowAnonymous]
+    public async Task<ActionResult<RegisterUserResponse>> Register(RegisterUserRequest request, CancellationToken cancellationToken)
     {
-        var response = await _mediator.Send(userRequest, cancellationToken);
+        var response = await _mediator.Send(request, cancellationToken);
         return Ok(response);
     }
     
     [HttpGet("getAll")]
+    [Authorize]
     public async Task<ActionResult<List<GetAllUserResponse>>> GetAll(CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(new GetAllUserRequest(), cancellationToken);
+        return Ok(response);
+    }
+    
+    [HttpPost("login")]
+    [AllowAnonymous]
+    public async Task<ActionResult<LoginUserResponse>> Login([FromBody] LoginUserRequest request, CancellationToken cancellationToken)
+    {
+        var response = await _mediator.Send(request, cancellationToken);
+
         return Ok(response);
     }
 }

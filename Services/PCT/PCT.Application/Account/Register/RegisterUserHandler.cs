@@ -1,29 +1,54 @@
-using AutoMapper;
 using MediatR;
-using PCT.Application.Repositories;
+using Microsoft.AspNetCore.Identity;
 using PCT.Domain.Account;
+using PCT.Domain.Common.Entity;
+using PCT.Domain.Common.Enum;
 
 namespace PCT.Application.Account.Register;
 
 public sealed class RegisterUserHandler : IRequestHandler<RegisterUserRequest, RegisterUserResponse>
 {
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly IUserRepository _userRepository;
-    private readonly IMapper _mapper;
+    private readonly UserManager<User> _userManager;
     
-    public RegisterUserHandler(IUnitOfWork unitOfWork, IUserRepository userRepository, IMapper mapper)
+    public RegisterUserHandler(UserManager<User> userManager)
     {
-        _unitOfWork = unitOfWork;
-        _userRepository = userRepository;
-        _mapper = mapper;
+        _userManager = userManager;
     }
     
-    public async Task<RegisterUserResponse> Handle(RegisterUserRequest userRequest, CancellationToken cancellationToken)
+    public async Task<RegisterUserResponse> Handle(RegisterUserRequest request, CancellationToken cancellationToken)
     {
-        var user = _mapper.Map<User>(userRequest);
-        _userRepository.Create(user);
-        await _unitOfWork.Save(cancellationToken);
+        var userExist = await _userManager.FindByEmailAsync(request.Email);
+        if (userExist != null)
+            return new RegisterUserResponse
+            {
+                StatusCode = new StatusCode { Type = StatusCodeType.Error, Message = "User Already Exist" } 
+            };
+        
+        var user = new User()
+        {
+            UserName = request.Email,
+            Email = request.Email,
+            SecurityStamp = Guid.NewGuid().ToString()
+        };
+        
+        var result = await _userManager.CreateAsync(user, request.Password);
 
-        return _mapper.Map<RegisterUserResponse>(user);
+        if (!result.Succeeded)
+        {
+            return new RegisterUserResponse
+            {
+                StatusCode = new StatusCode { Type = StatusCodeType.Error, Message = result.Errors.First().Description } 
+            };
+        }
+
+        return new RegisterUserResponse
+        {
+            Email = user.Email,
+            Id = Guid.Parse(user.Id),
+            StatusCode = new StatusCode
+            {
+                Type = StatusCodeType.Success, Message = "Registration completed successfully"
+            }
+        };
     }
 }
