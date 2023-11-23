@@ -2,7 +2,8 @@ using PCT.Domain.PersonalValue;
 
 namespace PCT.Application.Repositories;
 
-public interface IPersonalValueRepository: IBaseRepository<PersonalValue>
+public interface IPersonalValueRepository: IBaseRepository<Domain.PersonalValue.PersonalValue>
 {
-    void Add(PersonalValue personalValue);
+    void Add(Domain.PersonalValue.PersonalValue personalValue);
+    Task<bool> Exist(string name);
 }

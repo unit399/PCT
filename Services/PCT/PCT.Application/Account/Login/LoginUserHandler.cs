@@ -11,7 +11,7 @@ using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegiste
 
 namespace PCT.Application.Account.Login;
 
-public sealed class LoginUserHandler: IRequestHandler<LoginUserRequest, LoginUserResponse>
+public sealed class LoginUserHandler : IRequestHandler<LoginUserRequest, LoginUserResponse>
 {
     private readonly UserManager<User> _userManager;
     private readonly IConfiguration _configuration;

@@ -1,4 +1,5 @@
 using MediatR;
+using PCT.Application.Common.Contracts;
 
 namespace PCT.Application.Account.GetAll;
 

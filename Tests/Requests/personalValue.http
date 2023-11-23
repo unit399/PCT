@@ -1,0 +1,23 @@
+@url = https://localhost:7285
+
+# @name loginRequest
+POST {{url}}/api/account/login
+Content-Type: application/json
+
+{
+  "email": "okan.cilingiroglu@gmail.com",
+  "password": "qq11QQ!!"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+###
+
+# @name addPersonalValueRequest
+POST {{url}}/api/personalvalue/add
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "Name": "testValue",
+  "Description": "testDescription"
+}

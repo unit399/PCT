@@ -31,6 +31,8 @@ public sealed class RegisterUserHandler : IRequestHandler<RegisterUserRequest, R
             SecurityStamp = Guid.NewGuid().ToString()
         };
         
+        await _userManager.AddToRoleAsync(user, UserRoles.Coach.ToString());
+        
         var result = await _userManager.CreateAsync(user, request.Password);
 
         if (!result.Succeeded)

@@ -11,7 +11,7 @@ using PCT.Infrastructure.Context;
 namespace PCT.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231122194436_Initial")]
+    [Migration("20231123122441_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -189,6 +189,9 @@ namespace PCT.Infrastructure.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("INTEGER");
+
+                    b.Property<byte[]>("ProfilePicture")
+                        .HasColumnType("BLOB");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("TEXT");
