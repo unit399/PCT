@@ -1,4 +1,4 @@
-namespace PCT.Application.Repositories;
+namespace PCT.Domain.Common.RepositoryContracts;
 
 public interface IUnitOfWork
 {

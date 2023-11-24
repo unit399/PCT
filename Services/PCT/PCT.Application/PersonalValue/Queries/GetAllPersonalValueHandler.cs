@@ -1,7 +1,7 @@
 using AutoMapper;
 using MediatR;
-using PCT.Application.Repositories;
 using PCT.Domain.PersonalValue.Dtos;
+using PCT.Domain.PersonalValue.RepositoryContracts;
 
 namespace PCT.Application.PersonalValue.Queries;
 

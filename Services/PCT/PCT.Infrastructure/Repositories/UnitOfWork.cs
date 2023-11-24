@@ -1,4 +1,4 @@
-using PCT.Application.Repositories;
+using PCT.Domain.Common.RepositoryContracts;
 using PCT.Infrastructure.Context;
 
 namespace PCT.Infrastructure.Repositories;

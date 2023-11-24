@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using PCT.Application.Repositories;
 using PCT.Domain.Account.Entities;
+using PCT.Domain.Account.RepositoryContracts;
+using PCT.Domain.Common.RepositoryContracts;
+using PCT.Domain.PersonalValue.RepositoryContracts;
 using PCT.Infrastructure.Context;
 using PCT.Infrastructure.Repositories;
 

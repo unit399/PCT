@@ -1,8 +1,8 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PCT.Application.Repositories;
 using PCT.Domain.PersonalValue.Dtos;
+using PCT.Domain.PersonalValue.RepositoryContracts;
 using PCT.WebAPI.Controllers.Common;
 
 namespace PCT.WebAPI.Controllers.PersonalValue;

@@ -1,6 +1,6 @@
 using PCT.Domain.Account.Dtos;
 
-namespace PCT.Application.Repositories;
+namespace PCT.Domain.Account.RepositoryContracts;
 
 public interface ITokenRepository
 {

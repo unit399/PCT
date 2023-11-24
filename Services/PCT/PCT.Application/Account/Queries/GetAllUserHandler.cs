@@ -1,7 +1,7 @@
 using AutoMapper;
 using MediatR;
-using PCT.Application.Repositories;
 using PCT.Domain.Account.Dtos;
+using PCT.Domain.Account.RepositoryContracts;
 
 namespace PCT.Application.Account.Queries;
 

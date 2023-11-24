@@ -1,6 +1,6 @@
 using PCT.Domain.Account.Entities;
 
-namespace PCT.Application.Repositories;
+namespace PCT.Domain.Account.RepositoryContracts;
 
 public interface IUserRepository
 {

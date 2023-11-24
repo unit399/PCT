@@ -1,6 +1,6 @@
 using PCT.Domain.Common.Entities;
 
-namespace PCT.Application.Repositories;
+namespace PCT.Domain.Common.RepositoryContracts;
 
 public interface IBaseRepository<T> where T : BaseEntity
 {

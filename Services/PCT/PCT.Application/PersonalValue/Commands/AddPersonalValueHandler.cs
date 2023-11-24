@@ -1,8 +1,8 @@
 using MediatR;
-using PCT.Application.Repositories;
 using PCT.Domain.Common.Entities;
 using PCT.Domain.Common.Enums;
 using PCT.Domain.PersonalValue.Dtos;
+using PCT.Domain.PersonalValue.RepositoryContracts;
 
 namespace PCT.Application.PersonalValue.Commands;
 
