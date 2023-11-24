@@ -1,7 +1,7 @@
 using System.Globalization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using PCT.Domain.Account;
+using PCT.Domain.Account.Entities;
 
 namespace PCT.Infrastructure.Context;
 

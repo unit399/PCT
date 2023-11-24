@@ -13,4 +13,14 @@
     </ItemGroup>
 
 
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" Version="11.8.0"/>
+        <PackageReference Include="MediatR.Contracts" Version="1.0.1"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <Folder Include="Common\Interfaces\"/>
+    </ItemGroup>
+
 </Project>

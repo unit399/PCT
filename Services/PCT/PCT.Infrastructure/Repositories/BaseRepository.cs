@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PCT.Application.Repositories;
-using PCT.Domain.Common.Entity;
+using PCT.Domain.Common.Entities;
 using PCT.Infrastructure.Context;
 
 namespace PCT.Infrastructure.Repositories;

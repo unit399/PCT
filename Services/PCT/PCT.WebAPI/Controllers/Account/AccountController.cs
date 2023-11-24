@@ -1,9 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PCT.Application.Account.GetAll;
-using PCT.Application.Account.Login;
-using PCT.Application.Account.Register;
+using PCT.Domain.Account.Dtos;
 using PCT.WebAPI.Controllers.Common;
 
 namespace PCT.WebAPI.Controllers.Account;

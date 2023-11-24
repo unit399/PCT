@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using PCT.Application.Repositories;
-using PCT.Domain.Account;
+using PCT.Domain.Account.Entities;
 using PCT.Infrastructure.Context;
 using PCT.Infrastructure.Repositories;
 

@@ -1,7 +1,7 @@
 namespace PCT.Application.Repositories;
 
-public interface IPersonalValueRepository : IBaseRepository<Domain.PersonalValue.PersonalValue>
+public interface IPersonalValueRepository : IBaseRepository<Domain.PersonalValue.Entities.PersonalValue>
 {
-    void Add(Domain.PersonalValue.PersonalValue personalValue);
+    void Add(Domain.PersonalValue.Entities.PersonalValue personalValue);
     Task<bool> Exist(string name);
 }

@@ -1,5 +1,5 @@
 using PCT.Application.Repositories;
-using PCT.Domain.PersonalValue;
+using PCT.Domain.PersonalValue.Entities;
 using PCT.Infrastructure.Context;
 
 namespace PCT.Infrastructure.Repositories;

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using PCT.Domain.Account;
-using PCT.Domain.PersonalValue;
+using PCT.Domain.Account.Entities;
+using PCT.Domain.PersonalValue.Entities;
 
 namespace PCT.Infrastructure.Context;
 

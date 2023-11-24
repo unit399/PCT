@@ -1,4 +1,4 @@
-using PCT.Domain.Common.Entity;
+using PCT.Domain.Common.Entities;
 
 namespace PCT.Application.Repositories;
 

@@ -1,4 +1,4 @@
-using PCT.Application.Account.Token;
+using PCT.Domain.Account.Dtos;
 
 namespace PCT.Application.Repositories;
 
