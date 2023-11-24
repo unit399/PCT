@@ -4,7 +4,7 @@ using PCT.Infrastructure.Context;
 
 namespace PCT.Infrastructure.Repositories;
 
-public class PersonalValueRepository : BaseRepository<Domain.PersonalValue.PersonalValue>, IPersonalValueRepository
+public class PersonalValueRepository : BaseRepository<PersonalValue>, IPersonalValueRepository
 {
     private readonly ApplicationDbContext _context;
 
@@ -13,11 +13,11 @@ public class PersonalValueRepository : BaseRepository<Domain.PersonalValue.Perso
         _context = context;
     }
 
-    public void Add(Domain.PersonalValue.PersonalValue personalValue)
+    public void Add(PersonalValue personalValue)
     {
         _context.PersonalValues.Add(personalValue);
     }
-    
+
     public Task<bool> Exist(string name)
     {
         return Task.FromResult(_context.PersonalValues.Any(x => x.Name == name));

@@ -1,5 +1,4 @@
 using PCT.Application.Common.Contracts;
-using PCT.Domain.Common.Entity;
 
 namespace PCT.Application.Account.Register;
 

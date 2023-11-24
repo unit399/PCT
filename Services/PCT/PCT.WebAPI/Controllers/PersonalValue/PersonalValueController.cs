@@ -17,10 +17,11 @@ public class PersonalValueController : BaseApiController
         _mediator = mediator;
         _personalValueRepository = personalValueRepository;
     }
-    
+
     [HttpPost("add")]
     [Authorize(Roles = "Coach")]
-    public async Task<ActionResult<AddPersonalValueResponse>> Add(AddPersonalValueRequest request, CancellationToken cancellationToken)
+    public async Task<ActionResult<AddPersonalValueResponse>> Add(AddPersonalValueRequest request,
+        CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(request, cancellationToken);
         return Ok(response);

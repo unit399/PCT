@@ -13,7 +13,7 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         Context = context;
     }
-    
+
     public void Create(T entity)
     {
         Context.Add(entity);

@@ -13,7 +13,7 @@ public static class InstallServices
         services.AddAutoMapper(typeof(InstallServices).Assembly);
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
-        
+
         return services;
     }
 }

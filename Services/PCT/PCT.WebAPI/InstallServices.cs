@@ -1,7 +1,7 @@
 using Microsoft.OpenApi.Models;
-using PCT.WebAPI.Extensions;
 using PCT.Application;
 using PCT.Infrastructure;
+using PCT.WebAPI.Extensions;
 
 namespace PCT.WebAPI;
 
@@ -12,7 +12,7 @@ public static class InstallServices
         services
             .AddInfrastructure(configuration)
             .AddApplication();
-            
+
         services.AddSwaggerGen(option =>
         {
             option.SwaggerDoc("v1", new OpenApiInfo
@@ -32,20 +32,22 @@ public static class InstallServices
             option.AddSecurityRequirement(new OpenApiSecurityRequirement
             {
                 {
-                    new OpenApiSecurityScheme{
-                        Reference = new OpenApiReference{
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference
+                        {
                             Type = ReferenceType.SecurityScheme,
                             Id = "Bearer"
                         }
                     },
-                    new string[]{ }
+                    new string[] { }
                 }
             });
         });
 
         services.ConfigureApiBehavior();
         services.ConfigureCorsPolicy();
-        
+
         services.AddEndpointsApiExplorer();
         services.AddControllers();
 

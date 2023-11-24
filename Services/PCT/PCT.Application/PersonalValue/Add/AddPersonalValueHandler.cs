@@ -1,5 +1,4 @@
 using MediatR;
-using PCT.Application.Account.Register;
 using PCT.Application.Repositories;
 using PCT.Domain.Common.Entity;
 using PCT.Domain.Common.Enum;
@@ -14,20 +13,21 @@ public class AddPersonalValueHandler : IRequestHandler<AddPersonalValueRequest, 
     {
         _personalValueRepository = personalValueRepository;
     }
-    
-    public async Task<AddPersonalValueResponse> Handle(AddPersonalValueRequest request, CancellationToken cancellationToken)
+
+    public async Task<AddPersonalValueResponse> Handle(AddPersonalValueRequest request,
+        CancellationToken cancellationToken)
     {
         var userExist = await _personalValueRepository.Exist(request.Name);
         if (userExist)
             return new AddPersonalValueResponse
             {
-                StatusCode = new StatusCode { Type = StatusCodeType.Error, Message = "Personal Value Already Exist" } 
+                StatusCode = new StatusCode {Type = StatusCodeType.Error, Message = "Personal Value Already Exist"}
             };
 
         var personalValue = new Domain.PersonalValue.PersonalValue(request.Name, request.Description);
-        
+
         _personalValueRepository.Add(personalValue);
-        
+
         return new AddPersonalValueResponse
         {
             StatusCode = new StatusCode
