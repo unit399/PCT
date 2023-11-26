@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using PCT.Domain.PersonalValue.Dtos;
 using PCT.Domain.PersonalValue.RepositoryContracts;
 using PCT.WebAPI.Controllers.Common;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace PCT.WebAPI.Controllers.PersonalValue;
 
@@ -17,9 +18,10 @@ public class PersonalValueController : BaseApiController
         _mediator = mediator;
         _personalValueRepository = personalValueRepository;
     }
-
+    
     [HttpPost("add")]
     [Authorize(Roles = "Coach")]
+    [SwaggerOperation(Summary = "Add personal value", Description = "Add personal value"), Tags("PersonalValue")]
     public async Task<ActionResult<AddPersonalValueResponse>> Add(AddPersonalValueRequest request,
         CancellationToken cancellationToken)
     {

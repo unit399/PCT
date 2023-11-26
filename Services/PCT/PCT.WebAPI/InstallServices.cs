@@ -2,6 +2,7 @@ using Microsoft.OpenApi.Models;
 using PCT.Application;
 using PCT.Infrastructure;
 using PCT.WebAPI.Extensions;
+using PCT.WebAPI.Middleware;
 
 namespace PCT.WebAPI;
 

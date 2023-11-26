@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PCT.Infrastructure.Context;
 using PCT.WebAPI;
+using PCT.WebAPI.Middleware;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,6 +33,8 @@ app.UseSerilogRequestLogging();
 app.UseExceptionHandler("/error");
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<GlobalExceptionHandler>();
 
 app.UseAuthentication();
 app.UseAuthorization();
