@@ -22,7 +22,7 @@ public sealed class RegisterUserHandler : IRequestHandler<RegisterUserRequest, R
         if (userExist != null)
             return new RegisterUserResponse
             {
-                StatusCode = new StatusCode {Type = StatusCodeType.Error, Message = "User Already Exist"}
+                StatusCode = new StatusCode { Type = StatusCodeType.Error, Message = "User Already Exist" }
             };
 
         var user = new User
@@ -37,7 +37,7 @@ public sealed class RegisterUserHandler : IRequestHandler<RegisterUserRequest, R
         if (!result.Succeeded)
             return new RegisterUserResponse
             {
-                StatusCode = new StatusCode {Type = StatusCodeType.Error, Message = result.Errors.First().Description}
+                StatusCode = new StatusCode { Type = StatusCodeType.Error, Message = result.Errors.First().Description }
             };
 
         await _userManager.AddToRoleAsync(user, UserRoles.Coach);

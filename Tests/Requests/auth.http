@@ -28,7 +28,6 @@ Content-Type: application/json
 # @name getAllAccountsRequest
 GET {{url}}/api/account/getAll
 Accept: application/json
-//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoib2thbi5jaWxpbmdpcm9nbHVAZ21haWwuY29tIiwianRpIjoiMzdhMDIwN2UtNjk0OS00OTMxLTk0NzQtMDI1ZGEyZmQ2ZGFiIiwiZXhwIjoxNzAwNjkxODgyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjcyODUiLCJhdWQiOiJVc2VyIn0.XUuAbaRNV13tbl5FjGBC1NJLsx9zuQEwmrguwWtQQNE
 Authorization: Bearer {{auth_token}}
 
 ###

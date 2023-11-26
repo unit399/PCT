@@ -26,4 +26,12 @@ public class PersonalValueController : BaseApiController
         var response = await _mediator.Send(request, cancellationToken);
         return Ok(response);
     }
+
+    [HttpGet("getAll")]
+    [Authorize(Roles = "Coach")]
+    public async Task<ActionResult<List<GetAllPersonalValueResponse>>> GetAll(CancellationToken cancellationToken)
+    {
+        var response = await _mediator.Send(new GetAllPersonalValueRequest(), cancellationToken);
+        return Ok(response);
+    }
 }
