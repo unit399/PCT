@@ -5,7 +5,7 @@ using PCT.Domain.Account.Entities;
 using PCT.Domain.Common.Entities;
 using PCT.Domain.Common.Enums;
 
-namespace PCT.Application.Account.Register;
+namespace PCT.Application.Account.Commands;
 
 public sealed class RegisterUserHandler : IRequestHandler<RegisterUserRequest, RegisterUserResponse>
 {

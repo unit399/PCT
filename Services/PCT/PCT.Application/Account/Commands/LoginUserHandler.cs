@@ -10,7 +10,7 @@ using PCT.Domain.Common.Entities;
 using PCT.Domain.Common.Enums;
 using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
 
-namespace PCT.Application.Account.Login;
+namespace PCT.Application.Account.Commands;
 
 public sealed class LoginUserHandler : IRequestHandler<LoginUserRequest, LoginUserResponse>
 {

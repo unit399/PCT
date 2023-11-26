@@ -2,14 +2,8 @@ using PCT.Domain.Common.Entities;
 
 namespace PCT.Domain.PersonalValue.Entities;
 
-public class PersonalValue : BaseEntity
+public sealed class PersonalValue : BaseEntity
 {
-    public PersonalValue(string name, string description)
-    {
-        Name = name ?? throw new ArgumentNullException(nameof(name));
-        Description = description ?? throw new ArgumentNullException(nameof(description));
-    }
-
-    public string Name { get; set; }
-    public string Description { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;
 }

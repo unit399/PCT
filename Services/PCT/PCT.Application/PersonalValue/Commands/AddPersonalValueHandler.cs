@@ -21,14 +21,18 @@ public class AddPersonalValueHandler : IRequestHandler<AddPersonalValueRequest, 
     public async Task<AddPersonalValueResponse> Handle(AddPersonalValueRequest request,
         CancellationToken cancellationToken)
     {
-        var userExist = await _personalValueRepository.Exist(request.Name);
-        if (userExist)
+        var exist = await _personalValueRepository.Exist(request.Name);
+        if (exist)
             return new AddPersonalValueResponse
             {
                 StatusCode = new StatusCode { Type = StatusCodeType.Error, Message = "Personal Value Already Exist" }
             };
 
-        var personalValue = new Domain.PersonalValue.Entities.PersonalValue(request.Name, request.Description);
+        var personalValue = new Domain.PersonalValue.Entities.PersonalValue
+        {
+            Name = request.Name,
+            Description = request.Description
+        };
 
         _personalValueRepository.Add(personalValue);
         await _unitOfWork.Save(cancellationToken);
