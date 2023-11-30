@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using PCT.Application.Repositories;
-using PCT.Domain.Common.Entity;
+using PCT.Domain.Common.Entities;
+using PCT.Domain.Common.RepositoryContracts;
 using PCT.Infrastructure.Context;
 
 namespace PCT.Infrastructure.Repositories;
@@ -13,7 +13,7 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         Context = context;
     }
-    
+
     public void Create(T entity)
     {
         Context.Add(entity);

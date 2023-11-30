@@ -6,5 +6,4 @@ namespace PCT.WebAPI.Controllers.Common;
 [Route("api/[controller]")]
 public class BaseApiController : ControllerBase
 {
-      
 }

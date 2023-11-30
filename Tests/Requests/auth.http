@@ -1,15 +1,13 @@
-﻿@url = https://localhost:7285
-
-###
-
+﻿
 # @name registerRequest
 POST {{url}}/api/account/register
 Content-Type: application/json
 
 {
-  "email": "okan.cilingiroglu@gmail.com",
-  "password": "qq11QQ!!"
+  "email": "okan.cilingiroglu4@gmail.com",
+  "password": "q1w2E3@!"
 }
+
 ###
 
 # @name loginRequest
@@ -17,16 +15,19 @@ POST {{url}}/api/account/login
 Content-Type: application/json
 
 {
-  "email": "okan.cilingiroglu@gmail.com",
-  "password": "qq11QQ!!"
+  "email": "okan.cilingiroglu4@gmail.com",
+  "password": "q1w2E3@!"
 }
 
-> {% client.global.set("auth_token", response.body.token); %}
+> {%
+    client.global.set("auth_token", response.body.token);
+%}
+
 ###
 
 # @name getAllAccountsRequest
 GET {{url}}/api/account/getAll
 Accept: application/json
-//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoib2thbi5jaWxpbmdpcm9nbHVAZ21haWwuY29tIiwianRpIjoiMzdhMDIwN2UtNjk0OS00OTMxLTk0NzQtMDI1ZGEyZmQ2ZGFiIiwiZXhwIjoxNzAwNjkxODgyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjcyODUiLCJhdWQiOiJVc2VyIn0.XUuAbaRNV13tbl5FjGBC1NJLsx9zuQEwmrguwWtQQNE
 Authorization: Bearer {{auth_token}}
+
 ###

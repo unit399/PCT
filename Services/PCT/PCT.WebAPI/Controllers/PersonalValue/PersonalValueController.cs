@@ -1,9 +1,10 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PCT.Application.PersonalValue.Add;
-using PCT.Application.Repositories;
+using PCT.Domain.PersonalValue.Dtos;
+using PCT.Domain.PersonalValue.RepositoryContracts;
 using PCT.WebAPI.Controllers.Common;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace PCT.WebAPI.Controllers.PersonalValue;
 
@@ -20,9 +21,19 @@ public class PersonalValueController : BaseApiController
     
     [HttpPost("add")]
     [Authorize(Roles = "Coach")]
-    public async Task<ActionResult<AddPersonalValueResponse>> Add(AddPersonalValueRequest request, CancellationToken cancellationToken)
+    [SwaggerOperation(Summary = "Add personal value", Description = "Add personal value"), Tags("PersonalValue")]
+    public async Task<ActionResult<AddPersonalValueResponse>> Add(AddPersonalValueRequest request,
+        CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(request, cancellationToken);
+        return Ok(response);
+    }
+
+    [HttpGet("getAll")]
+    [Authorize(Roles = "Coach")]
+    public async Task<ActionResult<List<GetAllPersonalValueResponse>>> GetAll(CancellationToken cancellationToken)
+    {
+        var response = await _mediator.Send(new GetAllPersonalValueRequest(), cancellationToken);
         return Ok(response);
     }
 }
