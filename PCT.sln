@@ -8,6 +8,31 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PCT", "PCT", "{73863328-5325-4523-9F1F-9AF1FFE78ACD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{D485D414-6918-4BCA-8194-9DA6162B5549}"
+	ProjectSection(SolutionItems) = preProject
+		Web\PCT-Web\.editorconfig = Web\PCT-Web\.editorconfig
+		Web\PCT-Web\.gitignore = Web\PCT-Web\.gitignore
+		Web\PCT-Web\.vscode\extensions.json = Web\PCT-Web\.vscode\extensions.json
+		Web\PCT-Web\.vscode\launch.json = Web\PCT-Web\.vscode\launch.json
+		Web\PCT-Web\.vscode\tasks.json = Web\PCT-Web\.vscode\tasks.json
+		Web\PCT-Web\angular.json = Web\PCT-Web\angular.json
+		Web\PCT-Web\package-lock.json = Web\PCT-Web\package-lock.json
+		Web\PCT-Web\package.json = Web\PCT-Web\package.json
+		Web\PCT-Web\README.md = Web\PCT-Web\README.md
+		Web\PCT-Web\src\app\app.component.css = Web\PCT-Web\src\app\app.component.css
+		Web\PCT-Web\src\app\app.component.html = Web\PCT-Web\src\app\app.component.html
+		Web\PCT-Web\src\app\app.component.spec.ts = Web\PCT-Web\src\app\app.component.spec.ts
+		Web\PCT-Web\src\app\app.component.ts = Web\PCT-Web\src\app\app.component.ts
+		Web\PCT-Web\src\app\app.config.ts = Web\PCT-Web\src\app\app.config.ts
+		Web\PCT-Web\src\app\app.routes.ts = Web\PCT-Web\src\app\app.routes.ts
+		Web\PCT-Web\src\assets\.gitkeep = Web\PCT-Web\src\assets\.gitkeep
+		Web\PCT-Web\src\favicon.ico = Web\PCT-Web\src\favicon.ico
+		Web\PCT-Web\src\index.html = Web\PCT-Web\src\index.html
+		Web\PCT-Web\src\main.ts = Web\PCT-Web\src\main.ts
+		Web\PCT-Web\src\styles.css = Web\PCT-Web\src\styles.css
+		Web\PCT-Web\tsconfig.app.json = Web\PCT-Web\tsconfig.app.json
+		Web\PCT-Web\tsconfig.json = Web\PCT-Web\tsconfig.json
+		Web\PCT-Web\tsconfig.spec.json = Web\PCT-Web\tsconfig.spec.json
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4FAF01E1-F946-4000-911F-BF7124CF6E79}"
 EndProject
