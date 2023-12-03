@@ -1,23 +1,19 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\OkanC\AppData\Local\JetBrains\Rider2023.2\resharper-host\temp\Rider\vAny\CoverageData\_PCT.-866295298\Snapshot\snapshot.utdcvr</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=71cb1ebc_002D0928_002D4908_002D9f65_002D93fe82b53a50/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Handle_WithNewPersonalValue_ReturnsSuccessResponse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=71cb1ebc_002D0928_002D4908_002D9f65_002D93fe82b53a50/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Handle_WithNewPersonalValue_ReturnsSuccessResponse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::7D20309F-C4D8-4F3B-93E5-4FE03079B28B::net7.0::PCT.Application.UnitTest.PersonalValue.AddPersonalValueHandlerTests.Handle_WithNewPersonalValue_ReturnsSuccessResponse&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::7D20309F-C4D8-4F3B-93E5-4FE03079B28B::net7.0::PCT.Application.UnitTest.PersonalValue.AddPersonalValueHandlerTests.Handle_WithExistingPersonalValue_ReturnsErrorResponse&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::5B05C77F-98C3-4CD8-8B81-CBE9FE482502::net7.0::PCT.Infrastructure.UnitTest.PersonalValueRepositoryTests.Add_Should_AddPersonalValueToContext&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::5B05C77F-98C3-4CD8-8B81-CBE9FE482502::net7.0::PCT.Infrastructure.UnitTest.PersonalValueRepositoryTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::7E5CC415-B9FD-4FA1-8ED7-A3EE2DBA318E::net8.0::PCT.Architecture.UnitTest.DomainTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=97ae56ee_002Dd84c_002D4c9a_002D8342_002D4f5a94b90d78/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AccountControllerTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::95914D9E-BD23-4CF8-A928-F1A12E2371E6::net7.0::PCT.WebAPI.UnitTest.AccountControllerTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::95914D9E-BD23-4CF8-A928-F1A12E2371E6::net7.0::PCT.WebAPI.UnitTest.PersonalValueControllerTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::7D20309F-C4D8-4F3B-93E5-4FE03079B28B::net7.0::PCT.Application.UnitTest.LoginUserHandlerTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::7D20309F-C4D8-4F3B-93E5-4FE03079B28B::net7.0::PCT.Application.UnitTest.RegisterUserHandlerTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::7D20309F-C4D8-4F3B-93E5-4FE03079B28B::net7.0::PCT.Application.UnitTest.GetAllUserHandlerTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::7D20309F-C4D8-4F3B-93E5-4FE03079B28B::net7.0::PCT.Application.UnitTest.PersonalValue.GetAllPersonalValueHandlerTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::7D20309F-C4D8-4F3B-93E5-4FE03079B28B::net7.0::PCT.Application.UnitTest.PersonalValue.AddPersonalValueHandlerTests&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=97ae56ee_002Dd84c_002D4c9a_002D8342_002D4f5a94b90d78/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AccountControllerTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::7E5CC415-B9FD-4FA1-8ED7-A3EE2DBA318E::net8.0::PCT.Architecture.UnitTest.LayerTests.Domain_Should_NotHaveDependencyOnApplication&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::95914D9E-BD23-4CF8-A928-F1A12E2371E6::net8.0::PCT.WebAPI.UnitTest.AccountControllerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::95914D9E-BD23-4CF8-A928-F1A12E2371E6::net8.0::PCT.WebAPI.UnitTest.PersonalValueControllerTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;Project Location="C:\Source\PCT\Tests\PCT.Application.UnitTest" Presentation="&amp;lt;Tests&amp;gt;\&amp;lt;PCT.Application.UnitTest&amp;gt;" /&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Dtos/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
