@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCT.Application.UnitTest", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCT.Infrastructure.UnitTest", "Tests\PCT.Infrastructure.UnitTest\PCT.Infrastructure.UnitTest.csproj", "{5B05C77F-98C3-4CD8-8B81-CBE9FE482502}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCT.Shared", "Services\PCT\PCT.Shared\PCT.Shared\PCT.Shared.csproj", "{9FB361FB-C34E-42FE-B332-E799965FC746}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,10 @@ Global
 		{5B05C77F-98C3-4CD8-8B81-CBE9FE482502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B05C77F-98C3-4CD8-8B81-CBE9FE482502}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B05C77F-98C3-4CD8-8B81-CBE9FE482502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FB361FB-C34E-42FE-B332-E799965FC746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FB361FB-C34E-42FE-B332-E799965FC746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FB361FB-C34E-42FE-B332-E799965FC746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FB361FB-C34E-42FE-B332-E799965FC746}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +86,7 @@ Global
 		{95914D9E-BD23-4CF8-A928-F1A12E2371E6} = {4FAF01E1-F946-4000-911F-BF7124CF6E79}
 		{7D20309F-C4D8-4F3B-93E5-4FE03079B28B} = {4FAF01E1-F946-4000-911F-BF7124CF6E79}
 		{5B05C77F-98C3-4CD8-8B81-CBE9FE482502} = {4FAF01E1-F946-4000-911F-BF7124CF6E79}
+		{9FB361FB-C34E-42FE-B332-E799965FC746} = {73863328-5325-4523-9F1F-9AF1FFE78ACD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1381D444-12E7-4957-A6A2-2AA00152B2EA}
