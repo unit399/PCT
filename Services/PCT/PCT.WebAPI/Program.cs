@@ -11,6 +11,8 @@ builder.Host.UseSerilog((context, configuration) =>
 
 builder.Services.AddServices(builder.Configuration);
 
+builder.Host.UseSerilog();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

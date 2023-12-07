@@ -1,8 +1,12 @@
+using System.Reflection;
 using Microsoft.OpenApi.Models;
 using PCT.Application;
 using PCT.Infrastructure;
 using PCT.WebAPI.Extensions;
 using PCT.WebAPI.Middleware;
+using Serilog;
+using Serilog.Exceptions;
+using Serilog.Sinks.Elasticsearch;
 
 namespace PCT.WebAPI;
 
@@ -52,6 +56,44 @@ public static class InstallServices
         services.AddEndpointsApiExplorer();
         services.AddControllers();
 
+        ConfigureLogging();
+       
         return services;
+    }
+
+    private static void ConfigureLogging()
+    {
+        var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+
+        var config = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile($"appsettings.{environment}.json", optional: true)
+            .Build();
+
+        Log.Logger = new LoggerConfiguration()
+            .Enrich.FromLogContext()
+            .Enrich.WithExceptionDetails()
+            .WriteTo.Debug()
+            .WriteTo.Console()
+            .WriteTo.Elasticsearch(ConfigureElasticSink(config, environment))
+            .Enrich.WithProperty("Environment", environment)
+            .ReadFrom.Configuration(config)
+            .CreateLogger();
+    }
+
+    private static ElasticsearchSinkOptions ConfigureElasticSink(IConfigurationRoot config, string? environment)
+    {
+        var name = Assembly.GetExecutingAssembly().GetName().Name;
+        if (name != null)
+            return new ElasticsearchSinkOptions(new Uri(config["ElasticConfiguration:Uri"] ?? string.Empty))
+            {
+                AutoRegisterTemplate = true,
+                IndexFormat =
+                    $"{name.ToLower().Replace(".", "-")}-{environment?.ToLower()}-{DateTime.UtcNow:yyyy-MM}",
+                NumberOfReplicas = 1,
+                NumberOfShards = 2
+            };
+        
+        throw new Exception("Failed to get assembly name");
     }
 }

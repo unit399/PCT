@@ -5,7 +5,7 @@ namespace PCT.Domain.Account.Entities;
 
 public sealed class Client : BaseEntity
 {
-    public User User { get; set; }
+    public User? User { get; set; }
     public Guid UserId { get; set; }
     public string Cellular { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
